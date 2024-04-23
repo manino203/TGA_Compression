@@ -14,14 +14,14 @@ The program compresses the image by dividing it into blocks of a specified size 
 
 Example of using the program for compression:
 
-`./jbk compress --input <file path> --output <file path> --block-size <number> --max-diff <number>`
+`./sbc compress --input <file path> --output <file path> --block-size <number> --max-diff <number>`
 
 
 ###  Decompression
 
 Example of using the program for decompression:
 
-`./jbk decompress --input <file path> --output <file path>`
+`./sbc decompress --input <file path> --output <file path>`
 
 
 The arguments of the program (except for the first compress/decompress) can be entered in any order.

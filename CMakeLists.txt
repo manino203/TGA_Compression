@@ -6,11 +6,11 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fsanitize=address -g")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -g")
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(deps REQUIRED IMPORTED_TARGET glib-2.0)
-add_executable(jbk
+add_executable(sbc
         main.c
         compression.c
         decompression.c
 )
-target_compile_options(jbk PRIVATE -fsanitize=address -g)
-target_link_libraries(jbk PkgConfig::deps)
+target_compile_options(sbc PRIVATE -fsanitize=address -g)
+target_link_libraries(sbc PkgConfig::deps)
 
