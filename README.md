@@ -1,30 +1,30 @@
-# Kompresia TGA obrázka
+# TGA Image Compression
 
-Tento program umožňuje komprimovať a dekomprimovať TGA obrázky metódou JBK (jé-bé-ká), alebo Jednoduchou Blokovou Kompresiou.
+This program allows compressing and decompressing TGA images using the Simple Block Compression method.
 
-## Kompilácia a spustenie
+## Compilation and Execution
 
-Pre kompiláciu programu použite nasledujúci príkaz:
+To compile the program, use the following command:
 
 `source make.sh`
 
-### Kompresia
+### Compression
 
-Program komprimuje obrázok tak, že ho rozdelí na bloky so zadaným rozmerom a v každom bloku hľadá postupnosti podobných pixelov. Tieto postupnosti potom nahradí sekvenciou obsahujúcou prvý pixel v postupnosti a počet pixelov v postupnosti.
+The program compresses the image by dividing it into blocks of a specified size and looking for sequences of similar pixels in each block. These sequences are then replaced with a sequence containing the first pixel in the sequence and the number of pixels in the sequence.
 
-Príklad použitia programu na kompresiu:
+Example of using the program for compression:
 
-`./jbk compress --input <cesta k souboru> --output <cesta k souboru> --block-size <číslo> --max-diff <číslo>`
-
-
-###  Dekompresia
-
-Príklad použitia programu na dekompresiu:
-
-`./jbk decompress --input <cesta k souboru> --output <cesta k souboru>`
+`./jbk compress --input <file path> --output <file path> --block-size <number> --max-diff <number>`
 
 
-Argumenty programu (okrem prvého compress/decompress) môžu byť zadávané v ľubovoľnom poradí!
+###  Decompression
+
+Example of using the program for decompression:
+
+`./jbk decompress --input <file path> --output <file path>`
+
+
+The arguments of the program (except for the first compress/decompress) can be entered in any order.
 
 
 
